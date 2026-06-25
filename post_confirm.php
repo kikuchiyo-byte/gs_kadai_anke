@@ -1,4 +1,4 @@
-<?php var_dump($_POST);?>
+
 <?php
 $zogo = $_POST['zogo'];
 $yomikata = $_POST['yomikata'];
@@ -9,6 +9,8 @@ $imi = $_POST['imi'] ?? '';
 <head>
     <meta charset="UTF-8">
     <title>登録確認</title>
+    <link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <form action="write.php" method="post">
@@ -20,9 +22,9 @@ $imi = $_POST['imi'] ?? '';
     <input type="hidden" name="zogo" value="<?= htmlspecialchars($zogo, ENT_QUOTES) ?>">
     <input type="hidden" name="yomikata" value="<?= htmlspecialchars($yomikata, ENT_QUOTES) ?>">
     <input type="hidden" name="imi" value="<?= htmlspecialchars($imi, ENT_QUOTES) ?>">
-    <button type="submit">この内容で登録する</button>
+    <button type="submit" class="submit">この内容で登録する</button>
 </form>
 
-<button onclick="history.back()">戻る</button>
+<button onclick="history.back()" class="back">戻る</button>
 </body>
 </html>
